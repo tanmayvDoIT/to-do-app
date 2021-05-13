@@ -1,0 +1,21 @@
+.first-half,
+.second-half,
+.task-block {
+  transition: all 1s;
+  /* cursor: pointer; */
+}
+.first-half:hover {
+  background-color: yellow;
+}
+
+.first-half:hover > div > span {
+  color: black;
+}
+
+.second-half:hover {
+  background-color: red;
+}
+
+.input-word::placeholder {
+  color: white;
+}
