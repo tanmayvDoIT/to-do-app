@@ -28,6 +28,7 @@ const Home = () => {
     setList((prevState) => {
       let arr = [...prevState];
       let arr2 = arr.filter((item, itemId) => itemId !== id && item);
+      localStorage.setItem('localList', JSON.stringify(arr2));
       return arr2;
     });
   };
@@ -63,6 +64,9 @@ const Home = () => {
     if (list.length !== 0) {
       localStorage.setItem('localList', JSON.stringify(list));
     }
+    // else {
+    //   localStorage.setItem('localList', 'hey');
+    // }
   }, [list]);
 
   useEffect(() => {
